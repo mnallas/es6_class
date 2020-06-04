@@ -21,4 +21,28 @@ describe("Word", () => {
       expect(testWord).toEqual({ word: "thing" });
     });
   });
+
+  describe("Reverse", () => {
+    it("Should return a new object with the reversed word", () => {
+      const testWord = new Word("test");
+      expect(testWord.rev).toEqual({ word: "tset" });
+    });
+  });
+
+  describe("Capitalize", () => {
+    it("Should return a new object with the capitalized letters word", () => {
+      const testWord = new Word("test").cap;
+      expect(testWord).toEqual({ word: "TEST" });
+    });
+  });
+
+  describe("Palindrome", () => {
+    it("Should return a true if word is palindrome", () => {
+      const testWord = new Word("dad");
+      const testWord2 = new Word("test");
+
+      expect(testWord.isPal).toBe(true);
+      expect(testWord2.isPal).toBe(false);
+    });
+  });
 });

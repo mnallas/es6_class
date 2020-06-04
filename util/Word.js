@@ -7,8 +7,16 @@ class Word {
     return new Word(this.word.split("").reverse().join(""));
   }
 
+  get cap() {
+    return new Word(this.word.toUpperCase());
+  }
+
   get getWord() {
     return this.word;
+  }
+
+  get isPal() {
+    return this.word.split("").reverse().join("") === this.word;
   }
 
   set setWord(wrd) {
